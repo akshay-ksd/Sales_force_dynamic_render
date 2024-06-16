@@ -1,0 +1,9 @@
+<apex:page controller="DynamicHtmlRenderingController">
+    <apex:form id="form">
+        <apex:inputText value="{!inputText}" id="inputText" />
+        <apex:commandButton value="Render HTML" action="{!renderHtml}" reRender="htmlOutput" />
+        <apex:outputPanel id="htmlOutput">
+            <apex:outputText escape="false" value="{!renderedHtml}" />
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>
